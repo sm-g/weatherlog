@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Weatherlog.ViewModels.BaseViewModel">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAQAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\BaseViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weatherlog.ViewModels.ViewModelAccuracy">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQAACAAAAABCAMAggEQAIAQAAAgAAAEABEAAIAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelAccuracy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.ViewModels.ViewModelStations">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAgAAAAAQAAAQAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelStations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.ViewModels.ViewModelAbout">
+    <Position X="10" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Weatherlog.ViewModels.ViewModelAbout.SourceWithStationBasedResults" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\ViewModelAbout.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAwgAAAQAQAAAQQAIAAAAAAIAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelAbout.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.ViewModels.ViewModelForecastViewer">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QQECAAAAAABABEAggAQAAARAAAACAAIAAAAAICAAEAA=</HashCode>
+      <FileName>ViewModels\ViewModelForecastViewer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.ViewModels.ViewModelMain">
+    <Position X="1" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIAAAAgIIQgCAAAAgIBoCAQAcCwIAAACARAhEABAqgA=</HashCode>
+      <FileName>ViewModels\ViewModelMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.ViewModels.ViewModelPlot">
+    <Position X="12" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAChEECAAECAIAAAAAAUAABMQgAAAAAAQBBCQQBI=</HashCode>
+      <FileName>ViewModels\ViewModelPlot.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

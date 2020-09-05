@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="72ad1ced-5d71-4dab-ad1b-3407079abcde"
+  name="OxyPlot"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="0473a19c-a7d4-4cc8-b454-781a28f608a8"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DOxyPlot"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="fd3174d7-8bf5-40c7-b31c-28e7efe1732d"
+        name="OxyColor"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="ea39abb7-dfee-4b15-af03-b4696bce0461"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdev%2Fmy%2Fweatherlog2%2Fpackages%2FOxyPlot.Core.2013.1.46.1%2Flib%2Fportable-net4%2Bsl4%2Bwp71%2Bwin8%2FOxyPlot.dll Namespace%3DOxyPlot Type%3DOxyColor"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="988d0e6a-a724-4476-b0ce-a88283dbe779"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fc0593ab-c2a1-4eed-9440-9720289bf927">
+                <propertyInstance
+                  Id="c38991fc-5394-4727-a837-9d75e191b6a2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="399c332e-cc49-4336-8461-5d4740d1a2f0">
+                <propertyInstance
+                  Id="0cfdd8dc-a81b-4ba0-b696-972d3592f7a3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="26a23068-086e-4e33-a034-69d06fb29fac">
+                <propertyInstance
+                  Id="091a4125-463b-4ae7-aa87-c80347f83b4d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6ca868d9-15f1-48c2-ae33-2f8706a053d9">
+                <propertyInstance
+                  Id="a152efab-4d39-43cb-9854-3229275ffde9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c231bae7-0c5c-43b0-ab2b-e6a9b991410b">
+                <propertyInstance
+                  Id="21399eb1-5c7d-4744-9bb3-70198d99edcc"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a53afd22-42ce-418b-96a2-b20196b9e226"
+        name="PlotModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c6e85863-6f4f-4d7e-b31f-d3070fa884b6"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdev%2Fmy%2Fweatherlog2%2Fpackages%2FOxyPlot.Core.2013.1.46.1%2Flib%2Fportable-net4%2Bsl4%2Bwp71%2Bwin8%2FOxyPlot.dll Namespace%3DOxyPlot Type%3DPlotModel"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="af2da162-9ecc-43aa-86b1-88ca9616c69c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8027f3c6-4552-4877-8102-1b534ee7d5f3">
+                <propertyInstance
+                  Id="a543cfbb-bea7-4dea-aa5a-548dc90f01b9"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="28cc55ce-6a4f-46e0-91a6-42a28c25cec3">
+                <propertyInstance
+                  Id="3fd4a0cd-7086-4d78-a89a-afc890f18001"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="439d6070-302f-4ce0-9ce7-1c036b0c5925">
+                <propertyInstance
+                  Id="3f2f25b3-eb7f-40bd-ad9f-7e4393a33959"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="50d444f8-0b51-4139-a1b3-6c569a0b4683">
+                <propertyInstance
+                  Id="3719bdef-3763-4c60-8f97-ddfa7d5a3a35"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3c6da561-45fe-468c-bb72-b950114fcc12">
+                <propertyInstance
+                  Id="41b2b9f1-d0e9-412d-a782-ea20d0039317"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d2cf94ca-c0ed-4cf7-8743-d2e0a876f92a"
+        name="OxyMouseEventArgs"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="25fa5c1d-743b-439d-989a-57f8c4875c56"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdev%2Fmy%2Fweatherlog2%2Fpackages%2FOxyPlot.Core.2013.1.46.1%2Flib%2Fportable-net4%2Bsl4%2Bwp71%2Bwin8%2FOxyPlot.dll Namespace%3DOxyPlot Type%3DOxyMouseEventArgs"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f4d5be56-3457-49f8-a230-f938ce2a47af"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a3df9b24-9878-4637-aedb-06d25daec8bc">
+                <propertyInstance
+                  Id="e5b4aa04-a8b8-4c82-84ac-8fba2492e323"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ea4ea9d2-066b-4a4c-a9ea-d934398631d9">
+                <propertyInstance
+                  Id="d3f5ada9-306a-47c6-8b39-dfeb46311e05"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8316159c-5009-4eba-a59f-108c5b8dbec1">
+                <propertyInstance
+                  Id="59a59ca9-4871-4ea9-848e-edbdcad5eee3"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="812882f9-3585-4d16-9c24-d7b696ee824f">
+                <propertyInstance
+                  Id="2677253c-e39b-4306-b1ae-99eaf0f1aebd"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="56980e97-62e7-4bdf-8263-9b70dd4e1950">
+                <propertyInstance
+                  Id="898f3f81-00e4-41c3-a2df-b8858067b5c9"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="d76852ab-fc91-443b-9a32-8b177d5d288a"
+            isSubstitutable="false">
+            <classMoniker
+              Id="f24d17ca-dc2f-4567-ae47-a82269552eee"
+              LastKnownName="EventArgs"
+              LastKnownLocation="Package3_1716.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1b761d81-97cf-44d9-865c-18a0b8d6e289"
+        LastKnownName="Axes"
+        LastKnownLocation="Package9_1148.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="72eb8110-8222-4322-96a2-77aea358094e"
+        LastKnownName="Annotations"
+        LastKnownLocation="Package10_1148.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

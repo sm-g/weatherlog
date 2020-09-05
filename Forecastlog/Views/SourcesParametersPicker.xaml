@@ -1,0 +1,163 @@
+﻿<UserControl x:Class="Weatherlog.Views.SourcesParametersPicker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:vm="clr-namespace:Weatherlog.ViewModels"
+             xmlns:v="clr-namespace:Weatherlog.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="250"
+             d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance vm:SourcesParametersPickerViewModel, IsDesignTimeCreatable=True}"
+             >
+    <UserControl.Resources>
+        <sys:Double x:Key="parallelGridMinHeight">250</sys:Double>
+        <sys:Int32 x:Key="paralleledGridColumns">2</sys:Int32>
+
+        <Style x:Key="SyncListsItemStyle"
+               TargetType="{x:Type ListBoxItem}">
+            <Setter Property="HorizontalContentAlignment"
+                    Value="Stretch" />
+            <Setter Property="Padding"
+                    Value="0" />
+            <Setter Property="BorderThickness"
+                    Value="0" />
+        </Style>
+    </UserControl.Resources>
+    <UniformGrid x:Name="sourceParamGrid">
+        <UniformGrid.Style>
+            <Style TargetType="{x:Type UniformGrid}">
+                <Setter Property="Columns"
+                        Value="1" />
+                <Setter Property="Rows"
+                        Value="2" />
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding ActualHeight, ConverterParameter={StaticResource parallelGridMinHeight}, Converter={v:HeightToBoolConverter}, ElementName=sourceParamGrid, Mode=OneWay}"
+                                 Value="True">
+                        <Setter Property="Columns"
+                                Value="{StaticResource paralleledGridColumns}" />
+                        <Setter Property="Rows"
+                                Value="1" />
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </UniformGrid.Style>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Источники:"
+                       Margin="0,5,0,3"
+                       VerticalAlignment="Bottom" />
+            <CheckBox Content="Все"
+                      Command="{Binding SelectAllSourcesListCommand, Mode=OneWay}"
+                      IsChecked="{Binding IsAllSourcesChecked}"
+                      Margin="0,6,0,2"
+                      HorizontalAlignment="Right" />
+            <ListBox ItemsSource="{Binding Sources}"
+                     ItemContainerStyle="{StaticResource SyncListsItemStyle}"
+                     v:MultiSelectorBehaviours.SynchronizedSelectedItems="{Binding CheckedSources}"
+                     SelectionMode="Extended"
+                     x:Name="sourcesList"
+                     Grid.Row="1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <CheckBox IsChecked="{Binding IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBoxItem}}, Mode=TwoWay}"
+                                      VerticalContentAlignment="Center">
+                                <CheckBox.Content>
+                                    <TextBlock Text="{Binding Name, Mode=OneWay}">
+                                        <TextBlock.Style>
+                                            <Style TargetType="{x:Type TextBlock}">
+                                                <Setter Property="Padding"
+                                                        Value="1,0" />
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Columns, ElementName=sourceParamGrid, Mode=OneWay}"
+                                                                 Value="{StaticResource paralleledGridColumns}">
+                                                        <Setter Property="Padding"
+                                                                Value="10,0,2,0" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </CheckBox.Content>
+                            </CheckBox>
+
+                            <Rectangle Height="10"
+                                       Fill="{Binding Id, Converter={v:SourceToPlotColorConverter}}"
+                                       IsHitTestVisible="False">
+                                <Rectangle.Style>
+                                    <Style TargetType="{x:Type Rectangle}">
+                                        <Setter Property="Width"
+                                                Value="20" />
+                                        <Setter Property="Margin"
+                                                Value="3,0" />
+                                        <Setter Property="HorizontalAlignment"
+                                                Value="Right" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Columns, ElementName=sourceParamGrid, Mode=OneWay}"
+                                                         Value="{StaticResource paralleledGridColumns}">
+                                                <Setter Property="Width"
+                                                        Value="6" />
+                                                <Setter Property="Margin"
+                                                        Value="20,0,0,0" />
+                                                <Setter Property="HorizontalAlignment"
+                                                        Value="Left" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Rectangle.Style>
+                            </Rectangle>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+        <Grid Grid.Row="2"
+              Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.Style>
+                <Style TargetType="{x:Type Grid}">
+                    <Setter Property="Margin"
+                            Value="0" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Columns, ElementName=sourceParamGrid, Mode=OneWay}"
+                                     Value="{StaticResource paralleledGridColumns}">
+                            <Setter Property="Margin"
+                                    Value="10,0,0,0" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+
+            <TextBlock Text="Параметры:"
+                       Margin="0,5,0,3"
+                       VerticalAlignment="Bottom" />
+            <CheckBox Content="Все"
+                      Command="{Binding SelectAllParametersListCommand, Mode=OneWay}"
+                      IsChecked="{Binding IsAllParametersChecked}"
+                      Margin="0,6,0,2"
+                      HorizontalAlignment="Right" />
+            <ListBox ItemsSource="{Binding Parameters}"
+                     ItemContainerStyle="{StaticResource SyncListsItemStyle}"
+                     v:MultiSelectorBehaviours.SynchronizedSelectedItems="{Binding CheckedParameters}"
+                     SelectionMode="Extended"
+                     x:Name="parametersList"
+                     Grid.Row="1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Content="{Binding Name, Mode=OneWay}"
+                                  IsChecked="{Binding IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBoxItem}}, Mode=TwoWay}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </UniformGrid>
+</UserControl>

@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Weatherlog.Views.AboutStations"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:vm="clr-namespace:Weatherlog.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance vm:StationsViewModel}"
+             >
+    <Grid>
+        <DataGrid ItemsSource="{Binding Stations}"
+                  SelectedItem="{Binding SelectedStation}"
+                  GridLinesVisibility="None"
+                  CanUserReorderColumns="False"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Name, Mode=OneWay}"
+                                    Header="Название"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding UtcOffset, Mode=OneWay, StringFormat=UTC\{0:+#;-#\}}"
+                                    Header="Время"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Icao, Mode=OneWay}"
+                                    Header="ICAO"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Latitude, Mode=OneWay, TargetNullValue={x:Static sys:String.Empty}}"
+                                    Header="Широта"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Longitude, Mode=OneWay, TargetNullValue={x:Static sys:String.Empty}}"
+                                    Header="Долгота"></DataGridTextColumn>
+            </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Получить прогнозы"
+                              Command="{Binding FetchForecastsCommand}" />
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+    </Grid>
+</UserControl>

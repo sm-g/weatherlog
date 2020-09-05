@@ -1,0 +1,102 @@
+﻿<UserControl x:Class="Weatherlog.Views.ForecastViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:vm="clr-namespace:Weatherlog.ViewModels"
+             xmlns:v="clr-namespace:Weatherlog.Views"
+             xmlns:weather.computing="clr-namespace:Weatherlog.Computing;assembly=Weatherlog.Computing"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance vm:ForecastViewerViewModel}">
+    <UserControl.Margin>
+        <Thickness Left="{StaticResource windowMargin}" />
+    </UserControl.Margin>
+    <UserControl.Resources>
+        <sys:Double x:Key="colntrolsColumnMinWidth">210</sys:Double>
+        <sys:Double x:Key="colntrolsColumnMaxWidth">250</sys:Double>
+
+        <DataTemplate DataType="{x:Type vm:PlotViewModel}">
+            <v:AccuracyPlot />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:SourcesParametersPickerViewModel}">
+            <v:SourcesParametersPicker />
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"
+                              MinWidth="{StaticResource colntrolsColumnMinWidth}"
+                              MaxWidth="{StaticResource colntrolsColumnMaxWidth}" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+                <TextBlock Text="Дата и время группировки:"
+                           Margin="0,0,0,3" />
+                <RadioButton Margin="0,0,0,5"
+                             IsChecked="{Binding Path=GivenTimeKind, Converter={v:EnumToBoolConverter}, ConverterParameter={x:Static weather.computing:GivenForecastTimeKind.Created}}">Создание</RadioButton>
+                <RadioButton Margin="0,0,0,5"
+                             IsChecked="{Binding Path=GivenTimeKind, Converter={v:EnumToBoolConverter}, ConverterParameter={x:Static weather.computing:GivenForecastTimeKind.Valid}}">Срок действия</RadioButton>
+                <WrapPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,20,0">
+                        <DatePicker FirstDayOfWeek="Monday"
+                                    SelectedDate="{Binding SelectedDate, Mode=TwoWay}"
+                                    SelectedDateFormat="Short" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Час:"
+                                   Margin="0,0,5,0"
+                                   VerticalAlignment="Center" />
+                        <ComboBox ItemsSource="{Binding Times}"
+                                  SelectedValue="{Binding SelectedTime, Mode=TwoWay}"
+                                  Width="60"
+                                  VerticalContentAlignment="Center" />
+                    </StackPanel>
+                </WrapPanel>
+                <Separator Margin="0,15,0,3" />
+            </StackPanel>
+            <Grid Grid.Row="1">
+                <ContentControl Content="{Binding SourceParamPicker}" />
+            </Grid>
+            <Button Content="_Посмотреть прогнозы"
+                    Command="{Binding LoadSelectedForecastsCommand, Mode=OneWay}"
+                    Grid.Row="3"
+                    Margin="0,10,0,0"
+                    Width="150"
+                    Height="21" />
+        </Grid>
+        <ScrollViewer Grid.Column="1"
+                      VerticalScrollBarVisibility="Auto"
+                      CanContentScroll="True">
+            <ScrollViewer.Margin>
+                <Thickness Left="{StaticResource windowMargin}" />
+            </ScrollViewer.Margin>
+            <ItemsControl x:Name="plots"
+                          ItemsSource="{Binding Plots}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                     Columns="1" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

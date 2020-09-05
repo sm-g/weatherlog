@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Weatherlog.Models.StationsDirector">
+    <Position X="6.5" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAAAgAAAAAAAAAAAAEAAAAAAAAAAAAQAABAACAAAA=</HashCode>
+      <FileName>Models\StationsDirector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Forecast">
+    <Position X="11" Y="0.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAEAAAQAAAAAAAAAAAAQIAAgAAAEAA=</HashCode>
+      <FileName>Models\Entities\Forecast.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Station">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QAACIAAAAkAAAAAEAIAYAAQAACEAAAACAQBAgAAAEAA=</HashCode>
+      <FileName>Models\Entities\Station.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Weather">
+    <Position X="13.5" Y="0.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAEAAABAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Entities\Weather.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Forecasts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Weatherlog.Models.Fetcher">
+    <Position X="11.25" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAmAIQUAAAAASAAADQAABAACAgAEcABSAAAEACAAAA=</HashCode>
+      <FileName>Models\Fetcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Sources.SourcesDirector">
+    <Position X="2.5" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAEAAggACAAABAAAAAAUGAAAhAACAAAAQAAAAACBAIA=</HashCode>
+      <FileName>Models\SourcesDirector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Data.ForecastsDatabase">
+    <Position X="9.5" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACkQgIAQAABAAAAgAAAIAAAAAABAIAEAAQoCAAAAACg=</HashCode>
+      <FileName>Data\ForecastsDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Data.SourcesDatabase">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAACgCAAAAAAACAAAgAAACQAAAAAAAAA=</HashCode>
+      <FileName>Data\SourcesDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Data.StationsDatabase">
+    <Position X="4.75" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAQgIAAQACAAAAAAAAAAACAAagIQIAACIAAQCAIABA=</HashCode>
+      <FileName>Data\StationsDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Weatherlog.Models.Sources.IAbstractDataSource">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACgAAAIAAAAQAAAAAAAAQAAAAAAAAAAIAAAAkAAIA=</HashCode>
+      <FileName>Models\Entities\IAbstractDataSource.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

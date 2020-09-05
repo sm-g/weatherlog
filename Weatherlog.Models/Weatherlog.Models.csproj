@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A97CF4D2-DAEC-4418-B2B6-AF5089C71E2D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Weatherlog.Models</RootNamespace>
+    <AssemblyName>Weatherlog.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Forecast.io, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\weatherlog\bin\Debug\Forecast.io.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\weatherlog\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\EventArgs\LoadingFailedEventArgs.cs" />
+    <Compile Include="Data\EventArgs\SavingFailedEventArgs.cs" />
+    <Compile Include="Data\EventArgs\StationNameInvalidEventArgs.cs" />
+    <Compile Include="Data\ForecastsDatabase.cs" />
+    <Compile Include="Data\StationsDatabase.cs" />
+    <Compile Include="Data\SourcesDatabase.cs" />
+    <Compile Include="Models\Entities\AbstractParameter.cs" />
+    <Compile Include="Models\Helpers\Extensions.cs" />
+    <Compile Include="Models\Parameters\Cloudiness.cs" />
+    <Compile Include="Models\Parameters\Converters\PercentParameterConverter.cs" />
+    <Compile Include="Models\Parameters\Converters\CloudinessConverter.cs" />
+    <Compile Include="Models\Parameters\Converters\HumidityConverter.cs" />
+    <Compile Include="Models\Parameters\Converters\PrecipitationAmountConverter.cs" />
+    <Compile Include="Models\Parameters\Converters\PrecipitationKindConverter.cs" />
+    <Compile Include="Models\Parameters\Converters\PressureConverter.cs" />
+    <Compile Include="Models\Parameters\Converters\TemperatureConverter.cs" />
+    <Compile Include="Models\Parameters\Converters\WindDirectionConverter.cs" />
+    <Compile Include="Models\Parameters\Converters\WindSpeedConverter.cs" />
+    <Compile Include="Models\Parameters\Converters\CloudMetarDescription.cs" />
+    <Compile Include="Models\Parameters\Helpers\JsonParametersConverter.cs" />
+    <Compile Include="Models\Parameters\Humidity.cs" />
+    <Compile Include="Models\ParametersFactory.cs" />
+    <Compile Include="Models\Parameters\PrecipitationAmount.cs" />
+    <Compile Include="Models\Parameters\PrecipitationKind.cs" />
+    <Compile Include="Models\Parameters\Pressure.cs" />
+    <Compile Include="Models\Parameters\Temperature.cs" />
+    <Compile Include="Models\Parameters\WindDirection.cs" />
+    <Compile Include="Models\Parameters\WindSpeed.cs" />
+    <Compile Include="Models\Sources\DummySource.cs" />
+    <Compile Include="Models\Entities\ForecastDataSource.cs" />
+    <Compile Include="Models\Sources\ForecastioSource.cs" />
+    <Compile Include="Models\Sources\GismeteoSource.cs" />
+    <Compile Include="Models\Entities\IAbstractDataSource.cs" />
+    <Compile Include="Models\Entities\RealDataSource.cs" />
+    <Compile Include="Models\Sources\MeteoserviceruSource.cs" />
+    <Compile Include="Models\EventAgrs\FetchingFailedEventArgs.cs" />
+    <Compile Include="Models\EventAgrs\FetchingSucceededEventArgs.cs" />
+    <Compile Include="Models\EventAgrs\LastFetchTimeChangedEventArgs.cs" />
+    <Compile Include="Models\EventAgrs\FetchingEndedEventArgs.cs" />
+    <Compile Include="Models\Fetcher.cs" />
+    <Compile Include="Models\Entities\Forecast.cs" />
+    <Compile Include="Models\Helpers\Loader.cs" />
+    <Compile Include="Models\Entities\Station.cs" />
+    <Compile Include="Models\Sources\AddsMetarSource.cs" />
+    <Compile Include="Models\StationsDirector.cs" />
+    <Compile Include="Models\Entities\Weather.cs" />
+    <Compile Include="Models\Sources\Exceptions\NoLatLongException.cs" />
+    <Compile Include="Models\Sources\Exceptions\NoStationOffsetException.cs" />
+    <Compile Include="Models\Sources\OpenweathermaporgSource.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Sources\Exceptions\ResponseParsingException.cs" />
+    <Compile Include="Models\Sources\Rp5ruSource.cs" />
+    <Compile Include="Models\SourcesDirector.cs" />
+    <Compile Include="Models\Sources\Exceptions\StationQueryNotFoundException.cs" />
+    <Compile Include="Models\Sources\WeatheruaSource.cs" />
+    <Compile Include="Models\Sources\WorldweatheronlineSource.cs" />
+    <Compile Include="Models\Sources\WundergroundSource.cs" />
+    <Compile Include="Models\Sources\YrnoSource.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataClassDiagram.cd" />
+    <None Include="ParametersClassDiagram.cd" />
+    <None Include="Resources\dp2rh.csv" />
+    <None Include="SourcesClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

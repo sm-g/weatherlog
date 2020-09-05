@@ -1,0 +1,78 @@
+﻿<Window x:Class="Weatherlog.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+        xmlns:vm="clr-namespace:Weatherlog.ViewModels"
+        xmlns:v="clr-namespace:Weatherlog.Views"
+        x:Name="main"
+        Title="{Binding CurrentPageViewModel.Name, Mode=OneWay}"
+        Height="600"
+        Width="800"
+        d:DataContext="{d:DesignInstance vm:MainViewModel, IsDesignTimeCreatable=False}"
+        Icon="/forecastlog;component/Resources/icon.ico"
+        Cursor="{Binding IsFetching, Converter={v:BoolToCursorConverter}}">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+        <DataTemplate DataType="{x:Type vm:AccuracyViewModel}">
+            <v:Accuracy />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:SourcesViewModel}">
+            <v:AboutSources />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:ForecastViewerViewModel}">
+            <v:ForecastViewer />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:StationsViewModel}">
+            <v:AboutStations />
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Menu ItemsSource="{Binding PageViewModels}">
+            <Menu.ItemContainerStyle>
+                <Style TargetType="MenuItem">
+                    <Setter Property="Header" Value="{Binding Name}" />
+                    <Setter Property="Command" Value="{Binding DataContext.ChangePageCommand, RelativeSource={RelativeSource AncestorType={x:Type Menu}}}" />
+                    <Setter Property="CommandParameter" Value="{Binding}" />
+                    <Setter Property="Margin" Value="5" />
+                </Style>
+            </Menu.ItemContainerStyle>
+        </Menu>
+
+        <Grid  Grid.Row="1">
+            <Grid.Margin>
+                <Thickness Left="{StaticResource windowMargin}" Right="{StaticResource windowMargin}" Bottom="5"  Top="5" />
+            </Grid.Margin>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Текущая станция:" Margin="0,0,15,0" VerticalAlignment="Center" />
+            <ComboBox Grid.Column="1" ItemsSource="{Binding Stations}" DisplayMemberPath="Name" SelectedItem="{Binding CurrentStation, Mode=TwoWay}" MinWidth="150" VerticalContentAlignment="Center" />
+            <Expander Grid.Column="2" IsExpanded="{Binding IsStationsEditMode, Mode=TwoWay}" Header="Все станции" HorizontalAlignment="Right" VerticalContentAlignment="Center" />
+        </Grid>
+
+        <ContentControl Content="{Binding CurrentPageViewModel}" Grid.Row="2" Margin="0,1,0,5" />
+
+        <Expander x:Name="logExpander" Grid.Row="3" Header="Лог" MaxHeight="150" ExpandDirection="Up">
+            <Expander.Padding>
+                <Thickness Left="{StaticResource windowMargin}" Right="{StaticResource windowMargin}" Bottom="10"  Top="5" />
+            </Expander.Padding>
+            <TextBox x:Name="log" Text="{Binding Log}" IsReadOnly="True" ScrollViewer.CanContentScroll="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" TextChanged="TextBox_TextChanged" />
+        </Expander>
+
+        <TextBlock Grid.Row="3" Width="300" Text="{Binding FetchingMessage}" IsHitTestVisible="False" VerticalAlignment="Bottom" Margin="0,0,0,14" TextAlignment="Center" MinWidth="200" />
+        <ProgressBar Margin="0,0,0,0" Height="5" IsIndeterminate="True" Visibility="{Binding IsFetching, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" IsHitTestVisible="False" />
+    </Grid>
+</Window>

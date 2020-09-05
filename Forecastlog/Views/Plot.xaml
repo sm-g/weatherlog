@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Weatherlog.Views.Plot"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:vm="clr-namespace:Weatherlog.ViewModels"
+             xmlns:oxy="http://oxyplot.codeplex.com"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance vm:PlotViewModel, IsDesignTimeCreatable=True}"
+             x:Name="root"
+             MinHeight="{Binding MinHeight}">
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto">
+            <oxy:Plot Model="{Binding PlotModel}" />
+        </ScrollViewer>
+    </Grid>
+</UserControl>

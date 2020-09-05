@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="3281f19f-b1fb-4bc5-9447-2f4bb7d24858"
+  name="ForecastIO"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="4fdb8a4c-cdf7-405a-abbe-c1110e998b65"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DForecastIO"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="538c4572-f98d-44db-ab61-801169fa6d52"
+        name="ForecastIOResponse"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="566e70cc-b766-41b6-bf3f-02692c7ba2c5"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdev%2Fmy%2Fweatherlog2%2FWeatherlog.Models%2Fbin%2FDebug%2FForecast.io.dll Namespace%3DForecastIO Type%3DForecastIOResponse"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="06324fa9-0008-43d6-adbb-f8b9d1f30ccf"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="651031d4-d139-468a-9a6d-7c1b36dd4322">
+                <propertyInstance
+                  Id="2e1a907d-0e90-4899-a178-5dc60f473add"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0615abb8-f6a4-400e-843c-cf2848d3dbbc">
+                <propertyInstance
+                  Id="62c6ee64-1db0-4d31-9cc4-ba6eca05935e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c7c45049-8502-421c-a867-683b8a192a9e">
+                <propertyInstance
+                  Id="8100bb8e-e0ed-4b8a-b72d-936d2ec24e23"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="833ec0ee-a218-40ed-b23b-3aa073119884">
+                <propertyInstance
+                  Id="3a88827e-97f7-4726-9cab-db23b0685c2e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c1abbca6-e850-438e-9203-9fb768083cad">
+                <propertyInstance
+                  Id="d801877f-c5c9-46a5-b517-bf21bcdc06b3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="13f16f3d-9bbd-4c4e-a4e0-c47eed8031ae"
+        name="HourForecast"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0e53ff3a-963e-428f-9706-de9c13da573a"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdev%2Fmy%2Fweatherlog2%2FWeatherlog.Models%2Fbin%2FDebug%2FForecast.io.dll Namespace%3DForecastIO Type%3DHourForecast"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6626b195-143e-4465-b284-e7aea968266f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="22efce16-6830-4aad-9f7e-82d263037208">
+                <propertyInstance
+                  Id="bbb1764c-3634-4de3-a191-3fc0a0f8defb"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2d09dbb3-a133-419e-b4df-bd9cbe51dda0">
+                <propertyInstance
+                  Id="48f4cd9a-e291-445c-839e-ab941ca3882c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6ac2d73e-9654-4141-b3f1-4f803ea2ef2a">
+                <propertyInstance
+                  Id="6e6a023e-a7b1-46da-be16-1434fd10106d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1838d906-9072-4e00-b31c-b1d2e95d3cc5">
+                <propertyInstance
+                  Id="2db76f3a-fccd-4a34-89bb-a1d02171ca04"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b8dd02eb-3895-4989-b63c-0b1a2372f026">
+                <propertyInstance
+                  Id="8599d36f-3591-4993-be10-aa6e990c6a2d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

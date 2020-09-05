@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Weatherlog.Models.Parameters.WindSpeed" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAgAIwAIAgBQAQAAQAEABBAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\Parameters\WindSpeed.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.AbstractParameter" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAgAAAQAAQAAAABAAAAgAAAEAAA=</HashCode>
+      <FileName>Models\Entities\AbstractParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.Cloudiness" Collapsed="true">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAgAAwAIAgBAAQAAQAEBBBAIAAgAAAAABA=</HashCode>
+      <FileName>Models\Parameters\Cloudiness.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.Humidity" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAgAAwAIAgBAAQAAQAEABBAIAAgAAAAAgA=</HashCode>
+      <FileName>Models\Parameters\Humidity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.ParametersFactory">
+    <Position X="14.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQACAAgAAAAAIAAAAAAAAIBAAAKAAABCAIAAAABAg=</HashCode>
+      <FileName>Models\ParametersFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.PrecipitationAmount" Collapsed="true">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAwAIAgBAAQAAQAEABBAAAAgAAAEAAA=</HashCode>
+      <FileName>Models\Parameters\PrecipitationAmount.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.Pressure" Collapsed="true">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAgAAwAIAgBAAQAAQAEABBAAAAgIAAAAAA=</HashCode>
+      <FileName>Models\Parameters\Pressure.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.Temperature" Collapsed="true">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAgAAwAIAgBAAQAAQAEABBAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\Parameters\Temperature.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.WindDirection" Collapsed="true">
+    <Position X="16.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAgAAgAKAgjAAQAAQAEBBBAAgAgAAAAAAA=</HashCode>
+      <FileName>Models\Parameters\WindDirection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.PercentParameterConverter" Collapsed="true">
+    <Position X="8.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Models\Parameters\Converters\PercentParameterConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.HumidityConverter" Collapsed="true">
+    <Position X="6.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAIAAAAABCAAAAAAAA=</HashCode>
+      <FileName>Models\Parameters\Converters\HumidityConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.PrecipitationAmountConverter" Collapsed="true">
+    <Position X="10.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgEAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Models\Parameters\Converters\PrecipitationAmountConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.PressureConverter" Collapsed="true">
+    <Position X="6.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAQAAAAAAAAIAAg=</HashCode>
+      <FileName>Models\Parameters\Converters\PressureConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.TemperatureConverter" Collapsed="true">
+    <Position X="8.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Parameters\Converters\TemperatureConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.WindDirectionConverter" Collapsed="true">
+    <Position X="10.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAQCAAAAAEAAAAAAAAAAAAABABBAAAAAAAAA=</HashCode>
+      <FileName>Models\Parameters\Converters\WindDirectionConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.WindSpeedConverter" Collapsed="true">
+    <Position X="6.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAgAAAAAAAAgAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Models\Parameters\Converters\WindSpeedConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.PrecipitationKind" Collapsed="true">
+    <Position X="18.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAgAAgAIAgBgAQAAQAEABBAAAAgAAAEAAA=</HashCode>
+      <FileName>Models\Parameters\PrecipitationKind.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.CloudinessConverter" Collapsed="true">
+    <Position X="8.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAIACAAAEAAAAIAAAAAgIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Parameters\Converters\CloudinessConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Parameters.PrecipitationKindConverter" Collapsed="true">
+    <Position X="10.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAEAIgAAAQAAAAgAAQAAAAAAAAAAAAAAAAAAAIAAQ=</HashCode>
+      <FileName>Models\Parameters\Converters\PrecipitationKindConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Weatherlog.Models.Parameters.CloudMetarDescription" Collapsed="true">
+    <Position X="8.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Parameters\Converters\CloudMetarDescription.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

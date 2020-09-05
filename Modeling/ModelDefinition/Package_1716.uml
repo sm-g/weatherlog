@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="9a90a58d-f30c-4ae5-9649-7286a215a728"
+  name="Weatherlog"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="6632b225-a46c-424d-bce2-43e5873037e2"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DWeatherlog"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="4270b3da-9547-4886-9c96-cd8c8b43bfde"
+        LastKnownName="Models"
+        LastKnownLocation="Package1_1716.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="2ab16e98-d864-461c-95fb-91111bbdefdf"
+        LastKnownName="Computing"
+        LastKnownLocation="Package_1048.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="e7fbfe21-b7c8-41a4-95ae-231a7d9853e6"
+        LastKnownName="Data"
+        LastKnownLocation="Package_1135.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="20858067-68b2-4969-9678-e06688ecaf43"
+        LastKnownName="ViewModels"
+        LastKnownLocation="Package_1148.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

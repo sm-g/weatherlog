@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="Weatherlog.Models.Sources.MeteoserviceruSource">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAASoAABAAAEAQCAAABIIAQIAASAASAAQIQAAAiEACA=</HashCode>
+      <FileName>Models\Sources\MeteoserviceruSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Sources.ForecastDataSource">
+    <Position X="9" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAACgACAIAAAAQAAEAQAAAQAEAEAACAAAIAAAAsAAKA=</HashCode>
+      <FileName>Models\Entities\ForecastDataSource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weatherlog.Models.Sources.DummySource">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAACgAAAIAAAAQAAAAAAAAQAAAAAACAAAIAAAAgAACA=</HashCode>
+      <FileName>Models\Sources\DummySource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Sources.GismeteoSource">
+    <Position X="9.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAASoAABAAAEAQCAAABIIAQIAASAASAAQIQAAAiEACA=</HashCode>
+      <FileName>Models\Sources\GismeteoSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Sources.OpenweathermaporgSource">
+    <Position X="16.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAASoEABAAAEAQAAAABIIAQIAACAASAAQIQAAAiAACA=</HashCode>
+      <FileName>Models\Sources\OpenweathermaporgSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Sources.Rp5ruSource">
+    <Position X="5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAASoAABIAAEAQCAAARIIAQIAACAASAAQIQAAAiAACA=</HashCode>
+      <FileName>Models\Sources\Rp5ruSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Sources.WeatheruaSource">
+    <Position X="11.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAASoAABAAAEAQAAAABIIAQIAACAASAAQIQAAAiAACA=</HashCode>
+      <FileName>Models\Sources\WeatheruaSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Sources.WorldweatheronlineSource">
+    <Position X="18.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAASoEABAAAEAQCAAABIIAQIAACAASAAQIQAAAiAACA=</HashCode>
+      <FileName>Models\Sources\WorldweatheronlineSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Sources.WundergroundSource">
+    <Position X="7.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAASoEABAAAEAQCAAABIIAQIAACAASAAQIQAAAiAACA=</HashCode>
+      <FileName>Models\Sources\WundergroundSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Sources.YrnoSource">
+    <Position X="14" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAASoAABAAAEAQAAAABAIAQIgBCAASAAQIQAAAiAACA=</HashCode>
+      <FileName>Models\Sources\YrnoSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Sources.ForecastioSource">
+    <Position X="20.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAACoAABAAAEAQCAAARAIAQIAACAASAAwIQAAAiAACA=</HashCode>
+      <FileName>Models\Sources\ForecastioSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Sources.SourcesDirector">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAEAAggACAAABAAAAAAUGAAAhAACAAAAQAAAAACBAIA=</HashCode>
+      <FileName>Models\SourcesDirector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weatherlog.Models.Sources.RealDataSource">
+    <Position X="5" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACgACAIAAAAQAAAAAAAAQAEAEAACAAAIAAAAsAAqA=</HashCode>
+      <FileName>Models\Entities\RealDataSource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Weatherlog.Models.Sources.AddsMetarSource">
+    <Position X="7" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAASoAABCAAUAQAAAABIAgQIAACAACAAQIAAAQigACA=</HashCode>
+      <FileName>Models\Sources\AddsMetarSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Weatherlog.Models.Sources.IAbstractDataSource">
+    <Position X="1" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACgAAAIAAAAQAAAAAAAAQAAAAAAAAAAIAAAAkAAAA=</HashCode>
+      <FileName>Models\Entities\IAbstractDataSource.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

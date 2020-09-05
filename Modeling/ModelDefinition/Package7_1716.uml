@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="c9ef453d-7046-457c-8e75-3db8cc220362"
+  name="Json"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="d14f6986-4fe7-48a5-a9aa-4e5de43c293f"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DNewtonsoft.Json"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="db3a7e00-c1f3-441b-b556-9e63a98f380e">
+      <profileInstance
+        Id="1bd20bf0-d2da-4b84-a430-49601dc589db"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="cede78ad-3575-4b03-a28e-29a26f223ebb"
+        name="JsonReader"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0361ca7e-4998-4fad-ade5-a0911f85c565"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdev%2Fmy%2Fweatherlog2%2FWeatherlog.Models%2Fbin%2FDebug%2FNewtonsoft.Json.dll Namespace%3DNewtonsoft.Json Type%3DJsonReader"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="63a8e06f-25cd-4617-b169-d324662fd8f8"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="96188305-c39f-4aa9-995f-ffcaf2236707">
+                <propertyInstance
+                  Id="670a8c88-9b0f-4115-b912-238cfd719469"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="95c6648e-bd8d-4f3d-9d33-6081c80c49d5">
+                <propertyInstance
+                  Id="8ecfbc1a-4aac-44a6-aac6-fb4c62b20cac"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e2c20eef-b139-4acd-86cf-ca418505da57">
+                <propertyInstance
+                  Id="b227d6ea-716d-4681-bf4f-db67df93744d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8614a527-f568-457a-8d30-871b755a0c43">
+                <propertyInstance
+                  Id="1d6d2dfe-7e6d-43fa-b8af-dc6cecdd9230"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bba1e817-e840-4a85-9ad6-c12f8adadae7">
+                <propertyInstance
+                  Id="685d1a1d-fd29-4c8d-887a-023661fbb2ad"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="558f6cc0-0673-4ac6-8fc0-526d69d7902b">
+            <interfaceMoniker
+              Id="b63627d8-bc70-45f6-837e-22bb5a8cf610"
+              LastKnownName="IDisposable"
+              LastKnownLocation="Package3_1716.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2a21a380-4a46-41c2-84ea-8a041ec24278"
+        name="JsonSerializer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="273981ad-2ccb-46aa-b5e2-9d2f8cf91b2d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdev%2Fmy%2Fweatherlog2%2FWeatherlog.Models%2Fbin%2FDebug%2FNewtonsoft.Json.dll Namespace%3DNewtonsoft.Json Type%3DJsonSerializer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c5bd2fc5-7e5b-4046-90e8-629cf9d5c553"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2451afd6-4227-4abc-9ae0-37df7b7f5bfa">
+                <propertyInstance
+                  Id="22cfc160-2897-4d79-b743-60dcd82237a6"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4d0355b8-d2c8-43f5-aeb0-f760b0dc73df">
+                <propertyInstance
+                  Id="80410e9c-7a71-4747-b945-9399edf1aa66"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d446ebc0-42d9-4d8f-a151-b5126f60efd6">
+                <propertyInstance
+                  Id="9d308325-c9a6-4d7b-a6c2-f83f8861ea71"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e4d993cf-b603-4d71-ab7b-06765c1c48db">
+                <propertyInstance
+                  Id="f353ce01-7aba-4769-8a78-92b57ccc2b0d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="297caf24-a412-4cb3-9138-6e5e73914201">
+                <propertyInstance
+                  Id="c40a4920-0b88-4205-a085-a59ef6d79bcd"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="46d1d0a3-caad-43a0-9317-d5fc13ca61b2"
+        name="JsonWriter"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0df55144-1077-46df-9597-0eb24817ed1b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdev%2Fmy%2Fweatherlog2%2FWeatherlog.Models%2Fbin%2FDebug%2FNewtonsoft.Json.dll Namespace%3DNewtonsoft.Json Type%3DJsonWriter"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="75c04da7-378e-40c3-a242-0555feb7be61"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0c83d06e-2bdf-4793-a05a-75dae94962b6">
+                <propertyInstance
+                  Id="c1149789-0b82-4e3c-8b3d-12c90b1dfea1"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2f533755-00ce-4208-8327-4b52e07259e4">
+                <propertyInstance
+                  Id="2122adc3-9902-4e8f-aa81-2324c6358a6a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8c35863b-cf6c-45a1-affb-088e93467a1d">
+                <propertyInstance
+                  Id="94651469-9ca4-41fd-bd7d-54fce76e56c6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ec5e7868-bf45-4bd9-8ef4-1cfd98231b92">
+                <propertyInstance
+                  Id="6616bb99-1a7a-4ea5-962f-b634b2eaacaf"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eaf7b5e0-c685-4d8a-9f85-b5dc0f61b216">
+                <propertyInstance
+                  Id="11a11f3e-617a-4f8b-8203-2d6641a5269b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="a4302e3a-71ef-48ad-9a87-20703797a395">
+            <interfaceMoniker
+              Id="b63627d8-bc70-45f6-837e-22bb5a8cf610"
+              LastKnownName="IDisposable"
+              LastKnownLocation="Package3_1716.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="71457a12-e3c1-4d75-b2d2-4517d0f35b29"
+        name="JsonConverter"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="25b3dbb9-ba4f-41ee-ab2c-457ffbe015ed"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdev%2Fmy%2Fweatherlog2%2FWeatherlog.Models%2Fbin%2FDebug%2FNewtonsoft.Json.dll Namespace%3DNewtonsoft.Json Type%3DJsonConverter"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="119315a6-c1cb-4e84-abb2-c793e68d655c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f0d34182-57c0-43c1-a89a-1ee62893ba32">
+                <propertyInstance
+                  Id="8add9eed-d83d-46f4-9954-221207a294c7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6150cee0-a6ba-4f8d-ac36-6c1bc3200082">
+                <propertyInstance
+                  Id="3951f3f4-f27f-4349-af99-0cb8d5d802e6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="be23905d-385d-4d1e-b536-84c548c46174">
+                <propertyInstance
+                  Id="da9ea0c7-f986-43c0-84e2-a758807fad99"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="379cfe14-20e8-4b40-83b1-0ef800feace6">
+                <propertyInstance
+                  Id="27dcb94f-862e-4362-a0c7-1b4c7621ae3c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dd877146-155f-435c-813a-d9769ed59297">
+                <propertyInstance
+                  Id="a1958034-4c30-4d3e-a092-43eb79075ab1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="13b0d43f-fbc4-4500-9d23-29539a906cb2"
+        name="JsonSerializerSettings"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f3b7ab7b-dba7-440e-bd12-618de51d7c78"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdev%2Fmy%2Fweatherlog2%2FWeatherlog.Models%2Fbin%2FDebug%2FNewtonsoft.Json.dll Namespace%3DNewtonsoft.Json Type%3DJsonSerializerSettings"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9965fa44-1f09-44da-9455-08ec4b465b4c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="06638a52-6226-45a3-a4d3-2d626b67966b">
+                <propertyInstance
+                  Id="28c3056d-f27a-41e0-8a30-5fb6fcb1a196"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9b7651da-1a8c-41a6-b705-739e5cd17e74">
+                <propertyInstance
+                  Id="17bfe562-c24a-42d3-8dd0-8382685f7dd2"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7a2c42fc-bee4-4f6f-9e9d-aa84eb4027e8">
+                <propertyInstance
+                  Id="a9769249-53c0-46aa-a509-29f09452336a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="69f70dd5-ba7b-4025-af3b-a5675eab99ef">
+                <propertyInstance
+                  Id="2405e393-70c4-45ba-8e41-fa2029aaad0d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a2d08974-7e91-4edc-a3be-33ff265b0df8">
+                <propertyInstance
+                  Id="49a7f338-09b2-422f-97e6-6ebf41ef103a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
